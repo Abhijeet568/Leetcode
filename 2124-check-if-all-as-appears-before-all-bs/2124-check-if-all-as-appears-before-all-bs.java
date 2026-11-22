@@ -1,6 +1,15 @@
 class Solution {
     public boolean checkString(String s) {
-       return !s.contains("ba");
+        boolean bFound = false;
+        for(int i = 0;i<s.length();i++){
+            if(s.charAt(i)=='b'){
+                bFound = true;
+            }
+            if(s.charAt(i)=='a'&& bFound){
+                return false;
+            }
+        }
+        return  true;
 
     }
 }
